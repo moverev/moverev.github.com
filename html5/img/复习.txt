@@ -1,0 +1,586 @@
+标签：html
+	标题：h1-h6  字体加粗，大小
+	段落：p   	有间距  
+	超链接：a  颜色 ，下划线   
+		<a href="链接地址"></a>
+	插入图片：
+		<img src="图的路径" alt="替换文本" title="提示文本" />
+
+	换行：	<br  />
+	加粗：b,strong		
+	倾斜：i,em
+	无序列表：
+		ul>li
+	有序列表：
+		ol>li
+	描述列表：
+		dl>dt,dd,dd	
+	块：div
+	span
+
+表单标签 ：
+	文本框（输入框）：<input type="text" />
+		value="" placeholder=""
+
+	密码框：<input type="password" />
+		value="" placeholder=""
+
+	单选框：
+		<input type="radio" id="nan" />
+			name=""  一样的name
+			checked  默认选中
+	多选框：
+		<input type="checkbox" />
+			checked  默认选中
+	标记标签 ：
+		<label for="nan"></label>
+
+	下拉框:
+		<select>
+			<option></option>
+			<option selected></option>
+		 </select>
+		selected  默认选中
+
+	提交：	<input type="submit" />
+	确定按钮：	<input type="button" value="按钮" />
+	重置 ：<input type="reset" />
+	<form action=""></form>
+	文本域:	<textarea></textarea>			
+
+默认样式：
+	body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,input,textarea{ margin:0;padding:0;}		
+	a{ text-decoration:none; color:#666;}
+	img{ vertical-align:top; border:none;}
+	li{ list-style:none;}
+	input,textarea{ border:none; outline:none;}
+	textarea{resize:none;}
+
+属性：
+	style=""
+	href=""			
+	src=""
+	title=""  鼠标移上去显示的文字 
+	alt="替换文本"  图片加载失败显示的文字
+	class=""
+	id=""
+	type=""
+	name=""
+
+CSS:
+	color:  字体颜色
+		red,yellow
+		#ccc
+		rgb(255,0,0);
+
+	background:  字体颜色
+		red,yellow
+		#ccc
+		rgb(255,0,0);
+	width:宽度
+	height:高度
+	line-height:行高
+	text-align:center  让盒子里的文字或者图片水平居中
+		left/right
+
+text-decoration:
+	underline  下划线
+	none
+	line-through  中划线
+	overline  上划线
+
+省略号：
+	white-space:nowrap;  不换行
+	overflow:hidden;   溢出隐藏
+	text-overflow:ellipsis;  省略号
+
+
+font的分写：
+	font-size:
+	font-style:italic/normal
+	font-weight:bold/normal
+	font-family:'';	
+
+font的简写：
+	font:italic bold 12px '黑体';
+		至少有font-size  font-family
+
+	加上行高：
+	font:30px/100px '黑体';	
+
+background分写：
+	background-color:
+	background-image:url();		
+	background-repeat:repeat/no-repeat/repeat-x/repeat-y
+	background-position:
+		left/center/right/top/bottom  不区分顺序
+		12px，如果有数值表示，要区分顺序 
+		如果第二个值不写，默认是center
+
+background的简写：
+	background:red url()  no-repeat 50% 50%;
+
+border分写：
+	border-width:  边框的粗细
+	border-style:线型  solid /dashed/dotted
+	border-color:
+	border-top/bottom/left/right
+
+border简写：	
+	border:1px solid red;			
+
+盒子模型：一个盒子占据的实际大小
+	width/height+padding+border
+
+padding:内边矩  内容和边框的距离 
+	padding:20px ;  四个方向
+	padding:1px 2px; 上下   左右
+	padding:1px 2px 3px; 上  左右  下 
+	padding:1px 2px 3px 4px; 上  右  下 左
+	padding-top/left/right/bottom
+
+margin:外边矩  
+	margin:20px ;  四个方向
+	margin:1px 2px; 上下   左右
+	margin:1px 2px 3px; 上  左右  下 
+	margin:1px 2px 3px 4px; 上  右  下 左
+	margin-top/left/right/bottom
+
+margin的问题：
+	拖拽：子级的margin-top给了父级
+	解决：给父级加上边框
+		给父级加overflow:hidden
+		用父级的padding-top代替子级的margin-top
+
+margin的负值：
+	如果盒子没有宽度，会改变盒子的大小，盒子变大		
+
+
+浮动：
+	float:left/right/none
+	特性：
+		让元素放在一行
+		半脱离文档流
+		行内变成块
+		靠内容撑大
+		顶对齐
+		浮动有方向
+	三要素：
+		同级元素都要浮动
+		有了浮动，就要清浮动
+		浮动元素尽量有宽度	
+
+清浮动的三种方法：
+	给父级加overflow:hidden
+	加空div ,div{ clear:both}
+	给父级加类名.clearfix
+	.clearfix:after{ content:''; display:block; clear:both;}
+
+定位：
+相对定位：position:relative
+	参照物：自己
+	特性：
+		不脱离文档流
+		不能让行内变成块
+
+	用途：
+		当爹用
+		提高层次
+
+绝对定位：position:absolute
+	参照物：有定位的父级
+	特性：
+		完全脱离文档流
+		让行内变成块
+		宽度靠内容撑大
+
+固定定位：position:fixed
+	参照物：可视区
+	特性：
+		完全脱离文档流
+		让行内变成块
+		宽度靠内容撑大
+
+
+层级：z-index
+	只对定位元素起作用
+	子级的层级高于父级
+	后面的层级高于前面的
+	z-index:-1;
+
+坐标：
+	left
+	right
+	top
+	bottom
+
+一个有宽高的盒子垂直水平居中：
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-宽度的一半	
+	margin-top:-高度的一半
+
+块与行内：
+块标签 ：div,h1-h6,p,ul,li,ol,dl,dt,dd,	
+	特性：
+		独占一行
+		可以设置高宽
+		不受空格影响
+		支持四个方向的margin,padding
+		宽度默认是父级的宽度
+		用途：分块，布局
+
+行内标签 ：span,a,i,em,b,strong
+	特性：
+		共处一行
+		不可以设置高宽
+		受空格影响
+		支持水平方向的margin,padding
+		宽度靠内容撑大
+		用途：修饰，小细节	
+
+行内块标签 ：img,input	
+	特性：
+		共处一行
+		可以设置高宽
+		受空格影响
+		支持四个方向的margin,padding
+		
+块与行内的嵌套规则：硬的包软的
+	块标签可以包任意标签 ，p不能包块标签 
+	行内标签只包行内标签 ，但是a可以包任意标签 ，
+	但是a不能包它本身
+
+选择器：
+	通配符：*
+	标签：div
+	类：.box
+	ID：#box	
+	群组：div,span,p,a{}
+	嵌套：div span{}
+	筛选：.gaga.box{}
+	伪类：
+		a:link{}  访问之前 
+		a:visited{}  访问之后 
+		a:hover{} 鼠标移入
+		a:active{} 鼠标按下去
+	直接子级：
+		ul>li
+		div>span
+
+优先级：听谁的话
+	通配符：*   0.1
+	标签：div   1
+	类：.box    10
+	ID：#box   100
+	行间样式： style=""   无敌
+	!important:   超无敌
+
+文本样式都能继承 
+自己有的样式，那就不继承父级
+比如，a不继承父级的颜色				
+
+
+锚点：<a href="#one"></a>
+	<h2  id="one">123</h2>
+
+	<a href="#"></a>返回顶部
+
+em:
+	首行缩进 text-indent:2em;
+	搜索优化：text-indent:-999em	
+	div{ width:2em;}
+
+精灵图：sprite  背景图合并成一张图片
+	减少网页对图片加载数量
+	负值 
+
+
+图片的格式：
+	png:
+		支持透明
+		logo,精细的小图标
+		不经常换
+		背景图片
+
+	jpg：
+		不支持透明
+		商品图片
+		经常换
+		插入图片
+
+	gif：	
+		支持透明，不支持半透明
+		动态小图标
+table:
+	table{ border-collapse:collapse:}
+	vertical-align:top/middle/bottom
+	rowspan='2'   行合并
+	colspan='2'   列合并
+	cellspacing='0'  合并边框
+	cellpadding='0'  padding='0'
+
+
+HTML5:
+	<section>块</section>
+	<nav>导航</nav>	
+	<header>头部</header>	
+	<footer>尾部</footer>	
+	<aside>侧边栏</aside>	
+	<article>文章</article>
+	<time>时间</time>
+	<audio src=""></audio>	
+	autoplay  自动播放
+	controls  控制台
+	<video></video>
+	<input type="color" />
+	<input type="time" />
+	<input type="date" />
+	<input type="week" />
+	<input type="month" />
+	<input type="email" />
+	<input type="range" />
+
+CSS3：
+圆角：
+	border-radius:20px;  四个角	
+	border-radius:1px 2px; 左上右下    右上左下
+	border-radius:1px 2px 3px; 左上   右上左下  右下
+	border-radius:1px 2px 3px 4x;  左上   右上  右下 左下
+
+	border-bottom-right-radius:	右下
+	border-top-right-radius:	右上
+	border-bottom-left-radius:	左下
+	border-top-left-radius:	左上
+
+背景色透明：
+	background:rgba(0,0,0,.5);
+
+盒子阴影：
+	box-shadow:1px 2px 3px 4px red inset;
+		x轴	y轴  模糊度  扩散度 颜色  内阴影 
+		扩散度和内阴影可以省略不写
+
+文本阴影：
+	text-shadow:1px 2px 3px red ;
+		x轴	y轴  模糊度  颜色   
+		文本阴影没有扩散度和内阴影
+
+背景色渐变：
+	线性：linear-gradient(red,yellow);
+	放射性：radial-gradient(red,yellow);
+
+运动形式：
+	transition:all 1s;
+		linear  匀速
+		ease-in  加速 
+		ease-out  减速 
+		ease-in-out  先加速后减速 
+
+运动：transform:
+	平移： translate(1px,2px);
+		translateX(1px);
+		translateY(1px);
+
+	旋转： rotate(360deg);
+
+	倾斜： skew(1deg,2deg);
+
+	缩放： scale(2);
+
+定义字体：
+	@font-face{font-family:'a'; src:url();}
+	div{ font-family:'a';}
+
+兼容：
+	双倍边矩：display:inline;
+	清浮动：.clearfix{ zoom:1;}
+	负值：position:relative
+	图片透明png：  用JS
+	透明度：filter:alpha(opacity:50)
+	最小高度：overflow:hidden;
+	单像素 ：写双数
+	文字重复：background:none;
+
+Js:行为，交互，动画 
+事件：发生……事
+	onclick   点击	
+	onmouseover   鼠标移入	
+	onmouseout  鼠标移出
+	onload   加载
+
+获取元素：
+	document.getElementById();  通过ID获取一个元素
+	document.getElementsByTagName();  通过标签名获取多个元素
+	document.getElementsByClassName();  通过类名获取多个元素
+
+window.onload
+	先加载CSS 和HTML  再加载JS
+
+三部曲：
+	1.window.onload
+	2.获取元素
+	3. 添加事件
+
+修改属性：
+	oBox.style.background='red';	
+	oBox.style.marginLeft='200px';	
+	oImg.src='';
+	oLink.href='';
+	.value
+	.title=""
+	.className=''
+	.innerHTML='';
+if判断 ：
+	if(条件){
+		条件成功，执行这里
+	}else{
+		条件不成功，执行这里
+	}
+
+for(var i=0;i<3;i++){
+	
+}
+	var i=0  初始值
+	i<3;  条件
+	i++  自增
+
+aLi[0]  下标从0开始
+aLi[i].index=i;
+
+window.onload=function(){
+	var aBtn=document.getElementsByTagName('input');
+	var aDiv=document.getElementsByTagName('div');
+
+	for(var i=0;i<aBtn.lenght;i++){
+		aBtn[i].index=i;
+		aBtn[i].onmouseover=function(){
+			for(var i=0;i<aBtn.length;i++){
+				aBtn[i].className='';
+				aDiv[i].className='';
+			}
+			this.className='cur';
+			aDiv[this.index].className='show';
+		};
+	}
+};
+
+函数：
+	function show(a){ 定义函数
+		alert(a);
+	}
+	show(2) 调用函数
+
+	alert(1);  做调试用
+
+	oBtn.onclick=function(){  //匿名函数（事件函数 ）
+
+	}
+
+jQ:由JS封装成的
+	<script src=""></script>	
+
+window.onload
+	$(function(){
+
+	});	
+
+获取元素：
+	css选择器：
+		$('div');
+		$('#box span')
+
+	伪类选择器：
+		$('li:eq(3)')
+		$('li:gt(3)')
+		$('li:lt(3)')
+		$('li:first')
+		$('li:last') 
+		$('li:odd')  下标为奇数
+		$('li:even')  下标为偶数
+
+	属性选择器：
+		$('input[type=button]');	
+
+设置样式：
+	$('div').css('background','red').css('','');
+
+	$('div').css({
+		'':'',
+		'':''
+	});
+
+获取样式：
+	$('div').css('background');
+
+设置属性：
+	$('div').attr('class','box heihei');
+
+	$('div').attr({
+		'':'',
+		'':''
+	});
+
+获取属性：
+	$('div').attr('class');	
+
+事件：
+	.click(function(){  点击 
+
+	});	
+	.mouseover(function(){  鼠标移入
+
+	});	
+	.mouseout(function(){  鼠标移开 
+
+	});	
+	.hover(function(){  移入移出切换 
+
+	},function(){
+
+	});  只有两个函数
+
+	.toggle(function(){  点击切换事件
+
+	},function(){
+
+	});	至少有两个函数
+	
+动画：
+	.animate({
+		'width':'200px'
+	});	
+
+小方法：
+	.show()  显示 
+	.hide()  隐藏
+	.slideUp()  向上隐藏	
+	.slideDown()  向下显示 
+	.fadeIn()  淡出（逐渐的显示）	
+	.fadeOut()  淡入（逐渐的隐藏）	
+
+	.stop()  停止
+	.eq(2)  下标为2的元素
+	.index();  获取元素的下标
+
+	addClass();  添加类名
+	removeClass();  删除类名
+
+$(this); 当前操作对象
+
+居中问题：
+	text-align:center  盒子中的文字或者图片水平居中
+	margin:0 auto;  有宽度的盒子水平居中
+	background-position:center  背景图片居中
+	margin-left:-(图片的宽度-内容的宽度)/2  通栏图片居中
+
+PS的快捷键：
+	标尺：ctrl+r
+	信息：F8	
+	图层：F7	
+	取消选区：ctrl+d
+	保存：ctrl+shift+alt+s
+	新建：ctrl+n
+	首选项：ctrl+k
+	撤销：ctrl+alt+z

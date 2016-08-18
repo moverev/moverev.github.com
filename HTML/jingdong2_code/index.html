@@ -1,0 +1,1887 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<style>
+/*header*/
+.header{ min-width:1210px; height:30px; background:#f7f7f7; border-bottom:1px solid #eee; line-height:30px;}
+.header_l .icon1{ width:16px; height:12px; background:url(img/head_icon1.png); margin-top:9px;}
+.header_l .icon2{ width:12px; height:12px; background:url(img/head_icon2.png); margin-top:9px; margin-right:6px;}
+.header_l .icon3{ width:10px; height:16px; background:url(img/head_icon3.png); margin:7px 8px 0 12px;}
+.header_r i{ width:7px; height:4px; background:url(img/head_icon4.png); margin-top:13px; margin-left:9px;}
+.header_r .header_line{ width:1px; height:12px; background:#ddd; margin:9px 12px 0 12px;}
+.header_r .login{ margin-right:7px;}
+.header_r .icon5{ width:13px; height:22px; background:url(img/head_icon5.png); margin:5px 10px 0 0;}
+.header_r .icon6{ width:24px; height:11px; background:url(img/head_icon6.png); margin:9px 4px 0 0;}
+.header_r .icon7{ width:21px; height:11px; background:url(img/head_icon7.png); margin:9px 7px 0 0;}
+/*jdhead*/
+.jdhead{ height:80px; padding-top:10px;}
+.jdhead h1{ width:270px; height:60px; background:url(img/logo-201305.png); text-indent:-999px; margin-right:30px; margin-top:5px;}
+.jdhead .search{ margin-top:9px;}
+.jdhead .search_box{ width:410px; height:30px; border:3px solid #e4393c; border-right:none; padding-left:6px;}
+.jdhead .search_btn{ width:81px; height:36px; background:#e4393c; color:#fff; font-size:14px;}
+.jdhead .hot_word{ color:#999; line-height:24px;}
+.my_jdcar div{ border:1px solid #efefef; background:#f7f7f7; width:104px; height:30px; line-height:30px; margin-top:14px;}
+.my_jdcar .myself{ width:17px; height:17px; background:url(img/sprint.png) -160px 0; margin:6px 7px 0;}
+.my_jdcar .car{ width:20px; height:16px; background:url(img/sprint.png) -180px 0; margin:7px 7px 0 6px;}
+.my_jdcar .shopcar{ width:124px;}
+.my_jdcar .arow1{ width:0; height:0; border:5px solid transparent; border-top:5px solid #cdcdcd; margin:12px 6px 0;}
+.my_jdcar .arow2{ width:0; height:0; border:5px solid transparent; border-left:5px solid #cdcdcd; margin:10px 3px 0 6px;}
+.my_jdcar .shopcar{ position:relative;}
+.my_jdcar .numb{ color:#fff; background:#d60000; line-height:17px; padding:0 6px; border-radius:5px; border-bottom-left-radius:0; position:absolute; top:-13px; left:21px;}
+.jdhead .code{ width:138px; height:68px; background:url(img/sprint.png) -120px -27px;}
+/*main*/
+.menu h2{ color:#fff; background:#e4393c; line-height:40px; width:190px; padding-left:20px; font-weight:normal;}
+.menu ul{ width:182px; height:406px; border:2px solid #e4393c; border-top:none; font-size:14px; line-height:29px; padding:2px 10px 0 14px;}
+.menu ul .arow{ width:6px; height:9px; background:url(img/sprint.png) 0 -20px; margin-top:11px;}
+.main_r .nav{ width:1000px; height:40px; background:#e23638;}
+.main_r .nav a{ width:85px; text-align:center; line-height:40px; color:#fff; font-size:14px;}
+.main_r .nav .cur,.main_r .nav a:hover{ background:#a40000;}
+.main_r .nav .more{ width:59px; height:19px; background:url(img/sprint.png) -60px -20px; margin-top:10px; margin-right:40px;}
+.main_r .nav .clothes{ position:relative;}
+.main_r .nav .icon{ position:absolute; top:-5px; right:-16px; width:37px; height:23px; background:url(img/sprint.png) -200px 0;}
+.main_con .left{ width:670px;}
+.main_con .pic{ position:relative; display:block;}
+.main_con{ padding-top:10px; padding-left:10px;}
+.main_con .pic_btn{ position:absolute; width:168px; height:22px; bottom:7px; right:4px;}
+.main_con .pic_btn span{ width:22px; height:22px; border-radius:50%; background:#999; margin-right:5px; float:left; text-align:center; line-height:22px; color:#fff;}
+.main_con .pic_btn .cur{ background:#e4393c;}
+.main_con .s_pic{ border:1px solid #eee; border-top:none; height:159px;}
+.main_con .s_pic .s_btn{ width:30px; height:159px;}
+.main_con .s_pic .s_btn i{ width:14px; height:23px; background:url(img/sprint.png) -20px -21px; display:block; margin:0 auto; margin-top:71px;}
+.main_con .s_pic .s_btn .next{ background-position: -40px -20px;}
+.main_con .s_pic a{ border-right:1px solid #eee; position:relative;}
+.main_con .s_pic .last{ border:none;}
+.main_con .s_pic .text{ position:absolute;top:15px; left:30px;}
+.main_con .s_pic .text p{ line-height:22px; color:#676767;}
+.main_con .s_pic .text span{ line-height:16px; color:#ed3432; font-size:16px;}
+.jdkuaibao .hd{ line-height:30px; color:#666; border-bottom:2px solid #ccc;}
+.jdkuaibao .hd a{ color:#005ea7;}
+.jdkuaibao .jdkb_con{ width:308px; height:108px; border:1px solid #f1f1f1; border-top:none; line-height:25px;}
+.jdkuaibao .jdkb_con div{ width:143px; border-right:1px solid #eee; padding-left:10px; margin-top:5px;}
+.jdkuaibao .jdkb_con .jdkbcon_r{ border:none;}
+.jdservice{ width:308px; height:167px; border:1px solid #eee;}
+.jdservice li{ width:76px; height:74px; border-right:1px solid #eee; border-bottom:1px solid #eee; text-align:center; padding-top:10px; line-height:16px; float:left;}
+.jdservice .side{ border-right:none;}
+.jdservice .down{ height:72px; border-bottom:none;}
+.jdservice li i{ display:block; width:40px; height:40px; background:url(img/sprint.png) 0 -95px; margin:0 auto;}
+.jdservice li b{ display:block; width:0; height:0; border:3px solid transparent; border-top:3px solid #aaa; margin:0 auto; margin-top:7px;}
+/*livebox*/
+.livebox .hd h2{ font-size:22px; font-weight:normal; line-height:44px;}
+.livebox .hd i{ width:112px; height:44px; background:url(img2/livebox.png);}
+.livebox li{ margin-right:10px; margin-bottom:10px;}
+.livebox .last{ margin-right:0;}
+.livebox li a{ position:relative; width:295px; overflow:hidden;}
+.livebox .text{ width:100px; height:163px; background:rgba(255,255,255,0.5); position:absolute; top:0; left:0; padding-top:27px; padding-left:20px;}
+.livebox .text b{ font-size:18px; line-height:26px; color:#333; display:block;}
+.livebox .text span{line-height:24px; display:block;}
+.livebox .text .red_b{line-height:18px; width:52px; text-align:center; background:#e4393c; color:#fff;}
+.livebox .mid_banner{ margin:0 11px;}
+/*floor*/
+.floor .hd{ height:38px; border-bottom:2px solid #aaa;}
+.floor .hd h2{ width:210px;}
+.floor .hd h2 a{ font-size:22px; line-height:35px; margin-top:3px;}
+.floor .hd b{ width:26px; height:36px; background:url(img/sprint.png) 0 -50px; color:#fff; font-size:16px; line-height:30px; text-align:center; margin-right:36px;}
+.floor .hd .pro_title{ position:relative;}
+.floor .hd .pro_title a{ width:158px;  float:left; margin-top:8px; line-height:30px; text-align:center; font-weight:bold;}
+.floor .hd .pro_title .line{ position:absolute; bottom:3px; left:0; width:158px; height:5px;}
+.floor .hd .pro_title .line i{ width:0; height:0; border:4px solid transparent; border-bottom:4px solid #e4393c; display:block; margin:0 auto;}
+.floor .hd .pro_title .line span{ height:2px; background:#e4393c; display:block;}
+.floor .hd .more a{ color:#005ea7; line-height:28px; margin-top:10px;}
+.floor .hd .more .f{ margin-right:18px;}
+.floor .hd .more i{ width:8px; height:13px; background:url(img/more_icon1.png); margin-top:7px; margin-left:5px;}
+.floor_con{ height:361px; border-bottom:1px solid #ddd;}
+.floor_l{ width:209px; height:355px; padding-top:6px; border-right:1px solid #f1f1f1;}
+.floor_l .text a{ width:99px; padding-left:5px; line-height:25px;}
+.floor_m{ width:791px;}
+.floor_m li{ width:157px; height:174px; border-right:1px solid #f1f1f1; border-bottom:1px solid #f1f1f1; padding-top:6px; float:left;}
+.floor_m .li_l{ width:158px;}
+.floor_m .pro_simg{ margin:0 auto; display:block;}
+.floor_m .info p{ line-height:18px; height:36px; margin-top:11px; padding-left:10px; padding-right:16px;}
+.floor_m li>span{ color:#e4393c; line-height:24px; padding-left:10px;}
+.floor_m .big_pro{ width:473px; height:180px; padding-top:0; position:relative;}
+.floor_m .pro_btn{ width:152px; height:5px; position:absolute; bottom:6px; left:50%; margin-left:-76px;}
+.floor_m .pro_btn span{ float:left; width:36px; height:5px; background:#999; margin:0 1px;}
+.floor_m .pro_btn .cur{ background:#7abd54;}
+.floor_m .nobor_b{ border-bottom:none;}
+.floor_r ul{ border-bottom:1px solid #f1f1f1;}
+.floor_r li{ border-bottom:1px dotted #f1f1f1; height:35px; width:209px;}
+.floor_r ul .last{ border-bottom:none; margin-bottom:1px;}
+.floor_r .pro_r{ position:relative;}
+.floor_r .pro_btn{ width:76px; height:5px; position:absolute; bottom:6px; left:50%; margin-left:-38px;}
+.floor_r .pro_btn span{ float:left; width:36px; height:5px; background:#999; margin:0 1px;}
+.floor_r .pro_btn .cur{ background:#7abd54;}
+.floor .hd .hd_btn{ width:115px; height:22px;background:url(img/sprint.png) -168px -95px; margin-top:10px;}
+/*floor_three*/
+.three .floor_l{ padding-top:0; height:361px;}
+.three .floor_l .text{ padding-top:5px;}
+.three .floor_l .text a{ width:59px;}
+.three .floor_m .pic{ position:relative;}
+.three .floor_m .info{ line-height:17px; position:absolute; top:20px; left:10px;}
+.three .floor_m .info span{ color:#777; display:block;}
+.three .floor_m .pic i{ position:absolute; bottom:0; right:0; width:35px; height:18px; background:url(img/three-icon.png);}
+.three .floor_m .down{ height:180px; overflow:hidden;}
+/*floor_six*/
+.six .floor_con{ height:291px;}
+.six .floor_l{ height:285px;}
+.six .floor_m .nobor_b{ height:104px; width:262px;}
+.six .floor_m .li_lb{ width:264px;}
+.six .floor_m .nobor_b .pro_simg{ margin:0 10px; float:left;}
+.six .floor_m .info>div{ margin-top:13px;}
+.six .floor_m .info span{ line-height:21px; display:block;}
+.six .floor_m .info .span2{ color:#e4393c;}
+.floor_r .msg{ line-height:23px; padding-top:10px; padding-left:9px;}
+.floor_r .msg a{ background:url(img/msg_dian.png) no-repeat left; padding-left:5px;}
+.floor .hd .book_title{ position:relative;}
+.floor .hd .book_title a{ float:left; width:40px; text-align:center; line-height:30px; margin-top:8px;}
+.floor .hd .book_title .line{ position:absolute; bottom:3px; left:0; width:40px; height:5px;}
+.floor .hd .book_title .line i{ width:0; height:0; border:4px solid transparent; border-bottom:4px solid #e4393c; display:block; margin:0 auto;}
+.floor .hd .book_title .line span{ height:2px; background:#e4393c; display:block;}
+/*eight*/
+.eight .floor_r ul{ border:none;margin-left:5px; margin-top:16px; }
+.eight .floor_r li{ border-bottom:none; height:18px; width:200px; line-height:18px; margin-bottom:12px;}
+.eight .floor_r li i{ width:18px; height:18px; text-align:center; color:#ccc; border:1px solid #ccc; border-radius:50%; font-style:normal; margin-right:5px;}
+.eight .floor_r li .hot{ color:#e6494c; border:1px solid #e6494c;}
+.eight .floor_con{ height:321px; border-bottom:1px solid #ddd;}
+.eight .floor_m li{ height:154px;}
+.eight .floor_m .info p{ height:18px;}
+.eight .floor_l{ height:315px;}
+/*hotbox*/
+.hotbox .left{ width:888px; height:190px; border:1px solid #f1f1f1; border-top:2px solid #aaa;}
+.hotbox .left .l{ width:435px; border-right:1px solid #ddd; height:190px; margin-left:8px;}
+.hotbox .left h3{ line-height:30px; font-size:12px;}
+.hotbox .left .list{ border-bottom:1px dotted #f1f1f1; padding-top:9px; height:70px;}
+.hotbox .left .up{ border-bottom:none;}
+.hotbox .left .list a{ position:relative; margin-left:13px; margin-right:6px;}
+.hotbox .left .icon{ position:absolute; top:0; right:0; width:17px; height:19px; background:url(img/sprint.png) -240px 0;}
+.hotbox .left .info a{ line-height:24px; color:#005ea7;}
+.hotbox .left .info p span{ line-height:18px; color:#999; width:280px;}
+.hotbox .left .info b{ width:22px; height:15px; background:url(img/sprint.png) -260px -20px; margin-top:4px; margin-right:16px;}
+.hotbox .right{ width:308px; height:139px; border:1px solid #f1f1f1; border-top:2px solid #aaa;}
+.hotbox .right .read{ margin-bottom:4px;}
+.hotbox .right .read .hd{ line-height:30px; padding:0 8px; margin-bottom:4px;}
+.hotbox .right .read .hd a{ color:#005ea7;}
+.hotbox .right .read .hd h3{ font-size:12px;}
+.hotbox .right .con .pic{ margin:0 10px;}
+.hotbox .right .con li{ line-height:25px; background:url(img/hotbook_icon.png) no-repeat left; padding-left:7px;}
+.hotbox .right .con li a{ color:#005ea7;}
+.hotbox .right .dingyue h3{ font-size:12px; line-height:22px;}
+.hotbox .right .dingyue .box{ position:relative;}
+.hotbox .right .dingyue input{ width:215px; height:23px; border-top:1px solid #676767; border-left:1px solid #676767; border-right:1px solid #bbb; border-bottom:1px solid #bbb; padding-left:25px;}
+.hotbox .right .dingyue i{ width:16px; height:12px; background:url(img/sprint.png) -282px 0; position:absolute; top:6px; left:6px;}
+.hotbox .right .dingyue span{ width:63px; height:25px; line-height:25px; background:#e4393c; color:#fff; text-align:center; border-radius:3px;}
+/*service*/
+.service{ height:165px; border-top:1px solid #ddd; border-bottom:1px solid #f1f1f1; padding-top:11px;}
+.service_list{ width:192px; line-height:20px;}
+.first{ margin-left:24px;}
+.service_list b{ line-height:30px;}
+.service_list i{ width:33px; height:33px; background:url(img/service-1.png); margin-top:8px; margin-right:7px;}
+.jd_ziying{ background:url(img/service-2.png); width:226px; height:165px;}
+/*foot*/
+.foot .link{ text-align:center; margin-top:21px;}
+.foot a{ display:inline;}
+.foot .link span{ margin:0 10px; display:inline-block;}
+.foot .link{ margin-bottom:11px;}
+.foot p{ text-align:center; line-height:18px;}
+.end_img{ text-align:center; margin-bottom:48px;}
+.end_img a{ margin-right:10px;}
+</style>
+</head>
+
+<body>
+	<!--header-->
+	<div class="header">
+    	<div class="header_in w clearfix">
+        	<div class="header_l fl">
+            	<a href="#" class="clearfix fl marr_20">
+                	<i class="fl icon1"></i>
+                    <span class="fl">收藏京东</span>
+                </a>
+            	<a href="#" class="clearfix fl">
+                	<i class="fl icon2"></i>
+                    <span class="fl">关注京东</span>
+                </a>
+            	<a href="#" class="clearfix fl">
+                	<i class="fl icon3"></i>
+                	<b class="fl">北京&nbsp;</b>
+                    <span class="fl">[更换]</span>
+                </a>
+            </div>
+        	<div class="header_r fr">
+            	<a href="#" class="fl login">您好，请登录</a>
+            	<a href="#" class="fl register">免费注册</a>
+                <span class="fl header_line"></span>
+            	<a href="#" class="fl">我的订单</a>
+                <span class="fl header_line"></span>
+            	<a href="#" class="fl">
+                	<b class="fl icon6"></b>
+                	<span class="fl">会员俱乐部</span>
+                </a>
+                <span class="fl header_line"></span>
+            	<a href="#" class="fl">
+                	<b class="fl icon7"></b>
+                	<span class="fl">企业频道</span>
+                </a>
+                <span class="fl header_line"></span>
+            	<a href="#" class="fl">
+                	<b class="fl icon5"></b>
+                	<span class="fl">手机京东</span>
+                    <i class="fl"></i>
+                </a>
+                <span class="fl header_line"></span>
+            	<a href="#" class="fl">
+                	<span class="fl">客户服务</span>
+                    <i class="fl"></i>
+                </a>
+                <span class="fl header_line"></span>
+            	<a href="#" class="fl">
+                	<span class="fl">网站导航</span>
+                    <i class="fl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+	<!--jdhead-->
+    <div class="jdhead w clearfix">
+    	<a href="#" class="fl">
+        	<h1>京东购物</h1>
+        </a>
+        <div class="search fl marr_20">
+        	<div class="clearfix">
+                <input type="text" placeholder="流量充值" class="search_box fl" />
+                <input type="button" value="搜索" class="search_btn fl" />
+            </div>
+            <p class="hot_word clearfix">
+            	<span class="fl marr_10">热门搜索：</span> 
+                <a href="#" class="fl marr_10 hot">魅蓝note2</a>
+                <a href="#" class="fl marr_10">送现金券</a>
+                <a href="#" class="fl marr_10">一元秒杀</a>
+                <a href="#" class="fl marr_10">品质童装</a>
+                <a href="#" class="fl marr_10">9.9秒杀</a>
+                <a href="#" class="fl marr_10">复读机</a>
+                <a href="#" class="fl marr_10">真丝丝巾</a>
+            </p>
+        </div>
+        <div class="my_jdcar">
+            <div class="fl myjd clearfix marr_10">
+                <b class="myself fl"></b>
+                <a href="#" class="fl">我的京东</a>
+                <i class="arow1 fl"></i>
+            </div>
+            <div class="fl shopcar clearfix">
+                <b class="car fl"></b>
+                <a href="#" class="fl">去购物车结算</a>
+                <i class="arow2 fl"></i>
+                <span class="numb">0</span>
+            </div>
+        </div>
+        <a href="#" class="code fr"></a>
+    </div>
+	<!--main-->
+    <div class="main w clearfix">
+    	<div class="menu fl">
+        	<h2>全部商品分类</h2>
+            <ul>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            	<li class="clearfix">
+                	<a href="#" class="fl">图书、</a>
+                	<a href="#" class="fl">音响、</a>
+                	<a href="#" class="fl">数字商品</a>
+                    <i class="fr arow"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="main_r fl">
+        	<div class="nav">
+            	<a href="#" class="fl cur">首页</a>
+            	<a href="#" class="fl clothes">服装城
+                	<i class="icon"></i>
+                </a>
+            	<a href="#" class="fl">美食</a>
+            	<a href="#" class="fl">团购</a>
+            	<a href="#" class="fl">夺宝岛</a>
+            	<a href="#" class="fl">闪购</a>
+            	<a href="#" class="fl">金融</a>
+                <b class="fr more"></b>
+            </div>
+            <div class="main_con clearfix">
+            	<div class="left marr_10 fl">
+                	<a href="#" class="pic">
+                    	<img src="img2/img1.jpg" />
+                        <div class="pic_btn clearfix">
+                        	<span>1</span>
+                        	<span>2</span>
+                        	<span>3</span>
+                        	<span>4</span>
+                        	<span class="cur">5</span>
+                        	<span>6</span>
+                        </div>
+                    </a>
+                    <div class="s_pic clearfix">
+                    	<div class="s_btn fl">
+                        	<i></i>
+                        </div>
+                        <a href="#" class="fl">
+                        	<img src="img2/img2.jpg" />
+                            <div class="text">
+                            	<p>潮流商品，十四号是是</p>
+                                <span>低价一折起</span>
+                            </div>
+                        </a>
+                        <a href="#" class="fl">
+                        	<img src="img2/img2.jpg" />
+                            <div class="text">
+                            	<p>潮流商品，十四号是是</p>
+                                <span>低价一折起</span>
+                            </div>
+                        </a>
+                        <a href="#" class="fl last">
+                        	<img src="img2/img2.jpg" />
+                            <div class="text">
+                            	<p>潮流商品，十四号是是</p>
+                                <span>低价一折起</span>
+                            </div>
+                        </a>
+                    	<div class="s_btn fl">
+                        	<i class="next"></i>
+                        </div>
+                    </div>
+                </div>
+            	<div class="right fl">
+                	<a href="#" class="marb_10"><img src="img2/main_img1.png" /></a>
+                    <div class="jdkuaibao marb_10">
+                    	<div class="hd clearfix">
+                        	<b class="fl">京东快报</b>
+                            <a href="#" class="fr">更多快报&gt;</a>
+                        </div>
+                        <div class="jdkb_con clearfix">
+                        	<div class="fl">
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            </div>
+                        	<div class="fl jdkbcon_r ">
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            	<a href="#">腕表劲爆秒杀，限量抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="jdservice clearfix">
+                    	<li>
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                                <b></b>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                                <b></b>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                                <b></b>
+                            </a>
+                        </li>
+                    	<li class="side">
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                                <b></b>
+                            </a>
+                        </li>
+                    	<li class="down">
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                            </a>
+                        </li>
+                    	<li class="down">
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                            </a>
+                        </li>
+                    	<li class="down">
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                            </a>
+                        </li>
+                    	<li class="side down">
+                        	<a href="#">
+                            	<i></i>
+                                <span>话费</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--livebox-->
+	<div class="livebox w marb_10">
+    	<div class="hd clearfix">
+        	<h2 class="fl">生活的橱窗</h2>
+            <i class="fl"></i>
+        </div>
+        <ul class="clearfix">
+        	<li class="fl">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        	<li class="fl">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        	<li class="fl">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        	<li class="fl last">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        	<li class="fl">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        	<li class="fl">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        	<li class="fl">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        	<li class="fl last">
+            	<a href="#">
+                	<img src="img2/img3.jpg" />
+                    <div class="text">
+                    	<b>京东首发</b>
+                        <span>猛禽电竞耳机</span>
+                        <span class="red_b">全网首发</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="clearfix">
+        	<a href="#" class="fl"><img src="img2/img4.jpg" /></a>
+        	<a href="#" class="fl mid_banner"><img src="img2/img4.jpg" /></a>
+        	<a href="#" class="fl"><img src="img2/img4.jpg" /></a>
+        </div>
+    </div>
+    <!--floor1-->
+    <div class="floor w marb_10">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">1F</b>
+            	<a href="#" class="fl">家电通讯</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+            <div class="more fr">
+            	<a href="#" class="fl clearfix f">
+                	<span class="fl">大家电配送</span>
+                	<i class="fl"></i>
+                </a>
+            	<a href="#" class="fl clearfix">
+                	<span class="fl">大家电配送</span>
+                	<i class="fl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl">
+            	<div class="text clearfix">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                </div>
+            	<a href="#"><img src="img2/floor_img1.png" /></a>
+            </div>
+        	<ul class="floor_m fl clearfix">
+            	<li class="li_l">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="big_pro">
+                	<a href="#"><img src="img2/floor_img3.jpg"/></a>
+                    <div class="pro_btn clearfix">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            	<li>
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="li_l nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            </ul>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                </ul>
+                <a href="#" class="pro_r">
+                	<img src="img2/floor_img6.png" />
+                    <div class="pro_btn">
+                    	<span class="cur"></span>
+                    	<span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--floor2-->
+    <div class="floor w marb_10">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">2F</b>
+            	<a href="#" class="fl">电脑数码</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+            <div class="more fr">
+            	<a href="#" class="fl clearfix f">
+                	<span class="fl">大家电配送</span>
+                	<i class="fl"></i>
+                </a>
+            	<a href="#" class="fl clearfix">
+                	<span class="fl">大家电配送</span>
+                	<i class="fl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl">
+            	<div class="text clearfix">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                </div>
+            	<a href="#"><img src="img2/floor_img1.png" /></a>
+            </div>
+        	<ul class="floor_m fl clearfix">
+            	<li class="li_l">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="big_pro">
+                	<a href="#"><img src="img2/floor_img3.jpg"/></a>
+                    <div class="pro_btn clearfix">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            	<li>
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="li_l nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            </ul>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                </ul>
+                <a href="#" class="pro_r">
+                	<img src="img2/floor_img6.png" />
+                    <div class="pro_btn">
+                    	<span class="cur"></span>
+                    	<span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--floor3-->
+    <div class="floor w marb_10 three">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">3F</b>
+            	<a href="#" class="fl">服饰鞋包</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+            <a href="#" class="hd_btn fr"></a>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl clearfix">
+            	<div class="text clearfix fl">
+                    <a href="#">手机</a>
+                    <a href="#">空调</a>
+                    <a href="#">手机配件</a>
+                    <a href="#">平板电视</a>
+                    <a href="#">手机</a>
+                    <a href="#">空调</a>
+                    <a href="#">手机配件</a>
+                    <a href="#">手机</a>
+                    <a href="#">空调</a>
+                    <a href="#">手机配件</a>
+                    <a href="#">平板电视</a>
+                    <a href="#">手机配件</a>
+                    <a href="#">平板电视</a>
+                    <a href="#">手机配件</a>
+                </div>
+            	<a href="#" class="fl"><img src="img2/floor_three1.jpg" /></a>
+            </div>
+        	<div class="floor_m fl clearfix">
+            	<div class="list1 fl">
+                	<a href="#" class="pic">
+                    	<img src="img2/floor_three2.jpg" />
+                        <div class="info">
+                        	<b>春款发布</b>
+                            <span>满减专场</span>
+                        </div>
+                        <i></i>
+                    </a>
+                	<a href="#" class="pic down">
+                    	<img src="img2/floor_three2.jpg" />
+                        <div class="info">
+                        	<b>春款发布</b>
+                            <span>满减专场</span>
+                        </div>
+                        <i></i>
+                    </a>
+                </div>
+                <a href="#" class="pic fl">
+                    <img src="img2/floor_three3.jpg" />
+                </a>
+            	<div class="list1 fl">
+                	<a href="#" class="pic">
+                    	<img src="img2/floor_three2.jpg" />
+                        <div class="info">
+                        	<b>春款发布</b>
+                            <span>满减专场</span>
+                        </div>
+                        <i></i>
+                    </a>
+                	<a href="#" class="pic down">
+                    	<img src="img2/floor_three2.jpg" />
+                        <div class="info">
+                        	<b>春款发布</b>
+                            <span>满减专场</span>
+                        </div>
+                        <i></i>
+                    </a>
+                </div>
+                <a href="#" class="pic fl">
+                    <img src="img2/floor_three3.jpg" />
+                </a>
+            	<div class="list1 fl">
+                	<a href="#" class="pic">
+                    	<img src="img2/floor_three2.jpg" />
+                        <div class="info">
+                        	<b>春款发布</b>
+                            <span>满减专场</span>
+                        </div>
+                        <i></i>
+                    </a>
+                	<a href="#" class="pic down">
+                    	<img src="img2/floor_three2.jpg" />
+                        <div class="info">
+                        	<b>春款发布</b>
+                            <span>满减专场</span>
+                        </div>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                </ul>
+                <a href="#" class="pro_r">
+                	<img src="img2/floor_img6.png" />
+                    <div class="pro_btn">
+                    	<span class="cur"></span>
+                    	<span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--floor4-->
+    <div class="floor w marb_10">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">4F</b>
+            	<a href="#" class="fl">美容珠宝</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+            <a href="#" class="hd_btn fr"></a>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl">
+            	<div class="text clearfix">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                </div>
+            	<a href="#"><img src="img2/floor_img1.png" /></a>
+            </div>
+        	<ul class="floor_m fl clearfix">
+            	<li class="li_l">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="big_pro">
+                	<a href="#"><img src="img2/floor_img3.jpg"/></a>
+                    <div class="pro_btn clearfix">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            	<li>
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="li_l nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            </ul>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                </ul>
+                <a href="#" class="pro_r">
+                	<img src="img2/floor_img6.png" />
+                    <div class="pro_btn">
+                    	<span class="cur"></span>
+                    	<span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--floor5-->
+    <div class="floor w marb_10">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">5F</b>
+            	<a href="#" class="fl">居家生活</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+            <a href="#" class="hd_btn fr"></a>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl">
+            	<div class="text clearfix">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                </div>
+            	<a href="#"><img src="img2/floor_img1.png" /></a>
+            </div>
+        	<ul class="floor_m fl clearfix">
+            	<li class="li_l">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="big_pro">
+                	<a href="#"><img src="img2/floor_img3.jpg"/></a>
+                    <div class="pro_btn clearfix">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            	<li>
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="li_l nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            </ul>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                </ul>
+                <a href="#" class="pro_r">
+                	<img src="img2/floor_img6.png" />
+                    <div class="pro_btn">
+                    	<span class="cur"></span>
+                    	<span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--floor6-->
+    <div class="floor w marb_10 six">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">6F</b>
+            	<a href="#" class="fl">母婴玩具</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl">
+            	<div class="text clearfix">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                </div>
+            	<a href="#"><img src="img2/floor_img7.jpg" /></a>
+            </div>
+        	<ul class="floor_m fl clearfix">
+            	<li class="li_l">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="big_pro">
+                	<a href="#"><img src="img2/floor_img3.jpg"/></a>
+                    <div class="pro_btn clearfix">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            	<li>
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b li_lb">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <div class="fl">
+                        	<span>撒哈拉等哈上</span>
+                        	<span class="span2">送春游出游好礼</span>
+                        </div>
+                    </a>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <div class="fl">
+                        	<span>撒哈拉等哈上</span>
+                        	<span class="span2">送春游出游好礼</span>
+                        </div>
+                    </a>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <div class="fl">
+                        	<span>撒哈拉等哈上</span>
+                        	<span class="span2">送春游出游好礼</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                </ul>
+                <div class="msg">
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--floor7-->
+    <div class="floor w marb_10 six">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">7F</b>
+            	<a href="#" class="fl">食品保健</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl">
+            	<div class="text clearfix">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                </div>
+            	<a href="#"><img src="img2/floor_img7.jpg" /></a>
+            </div>
+        	<ul class="floor_m fl clearfix">
+            	<li class="li_l">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="big_pro">
+                	<a href="#"><img src="img2/floor_img3.jpg"/></a>
+                    <div class="pro_btn clearfix">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            	<li>
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上来看到了撒点就立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b li_lb">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <div class="fl">
+                        	<span>撒哈拉等哈上</span>
+                        	<span class="span2">送春游出游好礼</span>
+                        </div>
+                    </a>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <div class="fl">
+                        	<span>撒哈拉等哈上</span>
+                        	<span class="span2">送春游出游好礼</span>
+                        </div>
+                    </a>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <div class="fl">
+                        	<span>撒哈拉等哈上</span>
+                        	<span class="span2">送春游出游好礼</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img2/floor_img4.jpg" /></a>
+                    	<a href="#" class="fr"><img src="img2/floor_img4_2.jpg" /></a>
+                    </li>
+                </ul>
+                <div class="msg">
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                	<a href="#">回来肯定撒后来看到就立刻洒家的</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--floor8-->
+    <div class="floor w marb_20 eight">
+    	<div class="hd clearfix">
+        	<h2 class="clearfix fl">
+            	<b class="fl">8F</b>
+            	<a href="#" class="fl">图书音像</a>
+            </h2>
+            <div class="pro_title clearfix fl">
+            	<a href="#">特价商品</a>
+            	<a href="#">大家电</a>
+            	<a href="#">小家电</a>
+            	<a href="#">手机通讯</a>
+            	<a href="#">汽车五金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+            <div class="book_title fl clearfix">
+            	<a href="#">特品</a>
+            	<a href="#">大电</a>
+            	<a href="#">家电</a>
+            	<a href="#">通讯</a>
+            	<a href="#">汽车金</a>
+                <div class="line">
+                	<i></i>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="floor_con clearfix">
+        	<div class="floor_l fl">
+            	<div class="text clearfix">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                    <a href="#" class="fl">手机配件</a>
+                    <a href="#" class="fl">平板电视</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">空调</a>
+                </div>
+            	<a href="#"><img src="img/eight_img1.png" /></a>
+            </div>
+        	<ul class="floor_m fl clearfix">
+            	<li class="li_l">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="big_pro">
+                	<a href="#"><img src="img2/floor_img8.jpg"/></a>
+                    <div class="pro_btn clearfix">
+                        <span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            	<li>
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="li_l nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等哈上间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒撒立刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉等空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            	<li class="nobor_b">
+                	<a href="#" class="info">
+                    	<img src="img2/floor_ing2.jpg" class="pro_simg" />
+                        <p>撒哈拉刻了空间</p>
+                    </a>
+                    <span>￥6399.00元</span>
+                </li>
+            </ul>
+        	<div class="floor_r fl">
+            	<ul>
+                	<li class="clearfix">
+                    	<i class="fl hot">1</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl hot">2</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl hot">3</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl">4</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl">5</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl">6</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl">7</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl">8</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl">9</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                	<li class="clearfix">
+                    	<i class="fl">10</i>
+                        <a href="#" class="fl">从0到1开启商业未来</a>
+                        <span class="fr">￥21.00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--hotbox-->
+    <div class="hotbox w clearfix marb_10">
+    	<div class="left fl clearfix">
+        	<div class="l fl">
+            	<h3>热门晒单</h3>
+                <div class="list clearfix marr_10">
+                	<a href="#" class="fl">
+                    	<img src="img/hotbox.png" />
+                        <i class="icon"></i>
+                    </a>
+                    <div class="info">
+                        <a href="#">接撒肯德基阿历克斯觉得撒娇的雷克萨洒家离</a>
+                        <p class="clearfix">
+                        	<span class="fl">很多时候空间的哈萨克就间的哈萨克就间的哈萨克就回复可见的撒</span>
+                        	<b class="fr"></b>
+                        </p>
+                    </div>
+                </div>
+                <div class="list clearfix marr_10 up">
+                	<a href="#" class="fl">
+                    	<img src="img/hotbox.png" />
+                        <i class="icon"></i>
+                    </a>
+                    <div class="info">
+                        <a href="#">接撒肯德基阿历克斯觉得撒娇的雷克萨洒家离</a>
+                        <p class="clearfix">
+                        	<span class="fl">很多时候空间的哈萨克就间的哈萨克就间的哈萨克就回复可见的撒</span>
+                        	<b class="fr"></b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        	<div class="l fl">
+            	<h3>热门晒单</h3>
+                <div class="list clearfix marr_10">
+                	<a href="#" class="fl">
+                    	<img src="img/hotbox.png" />
+                        <i class="icon"></i>
+                    </a>
+                    <div class="info">
+                        <a href="#">接撒肯德基阿历克斯觉得撒娇的雷克萨洒家离</a>
+                        <p class="clearfix">
+                        	<span class="fl">很多时候空间的哈萨克就间的哈萨克就间的哈萨克就回复可见的撒</span>
+                        	<b class="fr"></b>
+                        </p>
+                    </div>
+                </div>
+                <div class="list clearfix marr_10 up">
+                	<a href="#" class="fl">
+                    	<img src="img/hotbox.png" />
+                        <i class="icon"></i>
+                    </a>
+                    <div class="info">
+                        <a href="#">接撒肯德基阿历克斯觉得撒娇的雷克萨洒家离</a>
+                        <p class="clearfix">
+                        	<span class="fl">很多时候空间的哈萨克就间的哈萨克就间的哈萨克就回复可见的撒</span>
+                        	<b class="fr"></b>
+                        </p>
+                    </div>
+                </div>
+            </div>	
+        </div>
+    	<div class="right fr">
+        	<div class="read">
+            	<div class="hd clearfix">
+                	<h3 class="fl">在线读书</h3>
+                    <a class="fr">更多在线读书&gt;</a>
+                </div>
+                <div class="con clearfix">
+                	<a href="#" class="fl pic"><img src="img2/hotbox.png" /></a>
+                    <ul class="fl">
+                    	<li>
+                        	<a href="#">从0到1开启商业未来</a>
+                        </li>
+                    	<li>
+                        	<a href="#">从0到1开启商业未来</a>
+                        </li>
+                    	<li>
+                        	<a href="#">从0到1开启商业未来</a>
+                        </li>
+                    	<li>
+                        	<a href="#">从0到1开启商业未来</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dingyue">
+            	<h3>订阅促销信息</h3>
+                <div class="clearfix box">
+                	<input type="text" placeholder="请输入您的Email地址" class="fl" />
+                    <span class="fr">订阅</span>
+                    <i></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--service-->
+    <div class="service w clearfix">
+    	<div class="service_list clearfix fl first">
+        	<i class="fl"></i>
+            <div class="fl">
+            	<a href="#"><b>帮助指南</b></a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+            </div>
+        </div>
+    	<div class="service_list clearfix fl">
+        	<i class="fl"></i>
+            <div class="fl">
+            	<a href="#"><b>帮助指南</b></a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+            </div>
+        </div>
+    	<div class="service_list clearfix fl">
+        	<i class="fl"></i>
+            <div class="fl">
+            	<a href="#"><b>帮助指南</b></a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+            </div>
+        </div>
+    	<div class="service_list clearfix fl">
+        	<i class="fl"></i>
+            <div class="fl">
+            	<a href="#"><b>帮助指南</b></a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+            </div>
+        </div>
+    	<div class="service_list clearfix fl">
+        	<i class="fl"></i>
+            <div class="fl">
+            	<a href="#"><b>帮助指南</b></a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+                <a href="#">购物流程</a>
+            </div>
+        </div>
+        <div class="jd_ziying fl"></div>
+    </div>
+    <!--footer-->
+    <div class="foot w">
+        <p class="link">
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+            <span>|</span>
+            <a href="#">关于我们</a>
+        </p>
+        <p>北京市公安局朝阳分局备案编号110105014669<span> | </span>京ICP证070359号<span> | </span>互联网药品信息服务资格证编号(京)-经营性-2014-0008<span> | </span>新出发京零字第大120007号</p>
+        <p>音像制品经营许可证苏宿批005号<span>|</span>出版物经营许可证编号新出发(苏)批字第N-012号<span>|</span>互联网出版许可证编号新出网证(京)字150号</p>
+        <p>网络文化经营许可证京网文[2011]0168-061号 违法和不良信息举报电话：400656115 违法和不良信息举报电话：4006561155  Copyright©2004-2015京东JD.com版权所有</p>
+        <p class="marb_10">京东旗下网站：360TOP  拍拍网  网银在线</p>
+		<div class="end_img">
+        	<a href="#"><img src="img/foot_img1.png" /></a><a href="#"><img src="img/foot_img2.png" /></a><a href="#"><img src="img/foot_img3.png" /></a><a href="#"><img src="img/foot_img4.png" /></a>
+        </div>
+    </div>
+</body>
+</html>

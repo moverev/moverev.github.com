@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<style>
+/*head*/
+.head{ min-width:1180px; height:40px; background:#2b2b2b;}
+.head .topline{ height:3px; background:#00925f;}	
+.head .left i{ width:21px; height:20px; background:url(img/icons.png)0 -882px; margin-top:10px; margin-right:12px;}
+.head .left .tecent_icon{ background-position:0 -910px; margin-right:16px;}
+.head .left span{ color:#00925f; font-size:14px; line-height:37px; font-weight:bold;}
+.head .right .line{ width:1px; height:16px; background:#474747; margin:0 15px; margin-top:10px;}
+.head .right .last{ margin-left:42px; margin-right:0;}
+.head .right a{ color:#b2b2b2; line-height:37px;}
+.head .right i{ width:19px; height:16px; background:url(img/icons.png) 0 -1014px; margin:12px 8px 0 0;}
+/*nav*/
+.nav{ height:85px;}
+.logo{ width:170px; height:65px; background:url(img/20141103155741_RL4uKj.png); text-indent:-999em;}
+.nav_in{ padding-top:5px;}
+.nav_in a{ line-height:80px; color:#2b2b2b; margin-right:40px;}
+.nav_in .last{ margin-right:20px;}
+/*banner*/
+.banner{ min-width:1180px; height:620px; background:url(img/20150202100021_PPLCdk.jpg) no-repeat top center; position:relative;}
+.banner img{ width:1180px; height:620px; border-bottom:1px solid #b2b2b2;}
+.opa{ background:rgba(255,255,255,0.5); width:100%; height:70px; position:absolute; bottom:0; left:0;}
+.opa .btn{ width:85px; margin:0 auto; padding-top:27px;}
+.opa .btn span{ width:15px; height:15px; background:url(img/icons.png) -257px -929px; margin-left:11px;}
+.opa .btn .last{ background-position: -280px -929px;}
+/*star*/
+.star{ min-width:1180px; background:#f2f2f2; height:745px; padding-top:52px;}
+.star_in .title{ width:288px; height:80px; background:url(img/icons.png) 0 -708px; margin:0 auto; margin-bottom:40px;}
+.star_product .pic{ height:560px; border-bottom:5px solid #dfdfdf;}
+.star_product .msg{ text-align:center;}
+.star_product .msg h2{ font-size:20px; line-height:33px; color:#2b2b2b; margin-top:20px;}
+.star_product .msg p{ line-height:25px; color:#b4b4b4;}
+.star_product .price{ line-height:25px; color:#00925f;margin-left:84px;}
+.star_product .price span{ margin-right:10px;}
+.star_product .msg a i{ width:13px; height:13px; background:url(img/icons.png) -177px -1014px; margin-top:7px;}
+.star_product .line{ width:1px; height:565px; background:#eaeaea; margin-left:10px; margin-right:9px;}
+/*accessory*/
+.accessory{ min-width:1180px; background:#f6f6f6; height:1026px; padding-top:44px; border-bottom:3px solid #d9d9d9;}
+.accessory_in .title{ width:386px; height:50px; background:url(img/title2.png); margin:0 auto; margin-bottom:46px;}
+.acc_product .pro_1{ width:280px; height:575px; border-bottom:5px solid #e1e1e1; background:#fff;}
+.acc_product .pic_msg{ padding-top:24px; text-align:center;}
+.acc_product .pic_msg .info{ font-size:14px; line-height:14px; color:#858585;}
+.acc_product .pic_msg p{ font-size:20px; font-weight:bold; line-height:40px; color:#555;}
+.acc_product .pic_msg .price{ color:#008d5a; font-weight:bold;}
+.text_box{ width:210px; height:270px; background:#fff; border:5px solid #eaeaea; padding:0 30px; text-align:center;}
+.text_box .acc_title{ color:#576267; line-height:58px; font-weight:bold;}
+.text_box .acc_word{ border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; height:122px; padding-left:11px; padding-top:28px;}
+.text_box .acc_word a{ margin-bottom:16px;}
+.text_box .acc_word .lang{ width:70px; margin-right:38px;}
+.text_box .acc_word i{ width:16px; height:18px; background:url(img/icons.png) -135px -356px; margin-right:8px;}
+.text_box .acc_word span{ color:#b2b2b2; line-height:18px;}
+.all_acc{ color:#00925f; line-height:13px; margin-top:22px; margin-left:60px;}
+.all_acc b{ width:13px; height:13px; background:url(img/icons.png) -177px -1014px; margin-left:5px;}
+.acc_product .left .down{ width:580px; height:270px; border-bottom:5px solid #e1e1e1; background:#fff;}
+.acc_product .left .down .pic_msg{ padding-top:97px; text-align:center;}
+.dianyuan{ width:280px; height:270px; background:#fff; border-bottom:5px solid #e1e1e1;}
+.acc_product .small{ padding:0;}
+.acc_product .small p{ font-size:16px; font-weight:bold; line-height:38px;}
+.pro3{ width:580px; height:275px; border-bottom:5px solid #e1e1e1; background:#fff;}
+.pro3 .pic_msg{ width:360px; padding-top:110px;}
+.pro3 .pic_msg .info{ font-size:16px; line-height:16px; color:#858585;}
+.pro3 .pic_msg p{ font-size:26px; font-weight:bold; line-height:64px; color:#555;}
+/*world*/
+.world{ min-width:1180px; background:#eaeaea; height:710px; padding-top:40px;}
+.world_in .title{ width:368px; height:50px; background:url(img/title3.png); margin:0 auto; margin-bottom:40px;}
+.world_serve>ul{ width:800px;}
+.text_list{ width:380px; height:560px; background:#fff;}
+.w_title{ margin-bottom:45px;}
+.w_title input{ width:190px; height:50px; font-size:18px; color:#a7a7a7; background:#dadada;}
+.w_title .cur{ background:#fff; border-top:2px solid #00925f;}
+.text_list .news{ margin-left:30px;}
+.text_list .news li{ width:320px; height:90px; background:#f6f6f6; margin-bottom:15px;}
+.text_list .news li p{ width:190px; line-height:18px; color:#838383; margin-left:16px; margin-top:16px;}
+/*foot*/
+.foot{ min-width:1180px; border-bottom:1px solid #eaeaea; height:79px; padding-top:46px;}
+.foot_in li{ width:20%;}
+.foot_in i{ width:41px; height:41px; background:url(img/foot_icon1.png); margin-right:12px;}
+.foot_in p{ font-size:18px; color:#363636; line-height:26px;}
+.foot_in span{ color:#989898; line-height:14px;}
+.foot_in .icon2{background:url(img/foot_icon2.png);}
+.foot_in .icon3{background:url(img/foot_icon3.png);}
+.foot_in .icon4{background:url(img/foot_icon4.png);}
+.foot_in .icon5{background:url(img/foot_icon5.png);}
+/*end*/
+.end{ padding-top:17px; height:223px;}
+.end .info{ width:188px;}
+.end .info h4{ font-size:12px; color:#373737; line-height:38px;}
+.end .info a{ color:#838383; line-height:28px; background:url(img/end_icon.png) no-repeat left; padding-left:10px;}
+.end .care{ width:188px;}
+.end .care h4{ font-size:12px; color:#373737; line-height:38px;}
+.end .care a{ color:#838383; line-height:28px;}
+.end .care i{ width:22px; height:20px; background:url(img/icons.png) 0 -882px; margin-top:5px; margin-right:3px;}
+.end .care .icon2{ background-position:0 -910px;}
+.end .care .icon3{ background-position:0 -940px;}
+.end .care .icon4{ background-position:0 -854px;}
+.end .cell h4{ font-size:12px; color:#373737; line-height:38px;}
+.end .cell p{ font-size:22px; color:#409f73; line-height:44px;}
+.end .cell a{ font-size:22px; color:#409f73; line-height:38px;}
+.end .cell span{ line-height:12px; color:#576267;}
+.end .cell .sever{ margin-bottom:12px; margin-top:9px;}
+.end .cell i{ width:36px; height:36px; background:url(img/end_icon2.png); margin-right:20px; margin-top:14px;}
+.end .cell .icon2{ background:url(img/end_icon3.png);}
+.end .cell b{ width:0; height:0; border:4px solid transparent; border-left:4px solid #409f73; margin-top:16px; margin-left:22px;}
+/*copyright*/
+.copyright{ min-width:1180px; height:42px; border-top:5px solid #000; background:#2b2b2b; padding-top:28px;}
+.last_logo{ width:100px; height:16px; background:url(img/last_logo.png); margin-right:20px;}
+.copyright p{ color:#828282; line-height:12px;}
+.copyright .link a{ color:#e2e2e2; line-height:12px; margin-left:40px;}
+</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="head">
+    	<div class="topline"></div>
+    	<div class="w clearfix">
+        	<div class="left fl clearfix">
+            	<i class="sina_icon fl"></i>
+                <i class="tecent_icon fl"></i>
+                <span class="fl">4001-666-888</span>
+            </div>
+        	<div class="right fr clearfix">
+            	<a href="#" class="fl">登录</a>
+                <span class="line fl"></span>
+            	<a href="#" class="fl">注册</a>
+                <span class="line fl"></span>
+            	<a href="#" class="fl">积分兑换</a>
+                <span class="line fl"></span>
+            	<a href="#" class="fl">帮助中心</a>
+                <span class="line fl"></span>
+            	<a href="#" class="fl clearfix"><i class="fl"></i>购物车</a> 
+                <span class="line fl last"></span>
+            </div>
+        </div>
+    </div>
+    <!--nav-->
+    <div class="nav w clearfix">
+    	<a href="#" class="fl"><h1 class="logo">OPPO</h1></a>
+    	<div class="nav_in fr clearfix">
+        	<a href="#" class="fl">首页</a>
+        	<a href="#" class="fl">手机</a>
+        	<a href="#" class="fl">配件</a>
+        	<a href="#" class="fl">服务</a>
+        	<a href="#" class="fl">体验店</a>
+        	<a href="#" class="fl">软件商店</a>
+        	<a href="#" class="fl">ColorOS</a>
+        	<a href="#" class="fl last">社区</a>
+        </div>
+    </div>
+    <!--banner-->
+    <div class="banner">
+    	<a href="#" class="pic w"><img src="img/20150202100021_TgEOkp.png" /></a>
+    	<div class="opa">
+        	<div class="btn clearfix">
+            	<span class="fl"></span>
+            	<span class="fl"></span>
+            	<span class="fl last"></span>
+            </div>
+        </div>
+    </div>
+    <!--star-->
+    <div class="star">
+    	<div class="star_in w">
+        	<a href="#" class="title"></a>
+            <div class="star_product clearfix">
+                <div class="pic fl">
+                    <a href="#"><img src="img/img1.png" /></a>
+                    <img src="img/pic-s.png" />
+                    <div class="msg">
+                        <h2>N3</h2>
+                        <p class="info">1600万电动旋转摄像头</p>
+                        <a href="#" class="clearfix price">
+                            <span class="fl">￥3699</span>
+                            <span class="fl">立即购买</span>
+                            <i class="fl icon_go"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="fl line"></span>
+                <div class="pic fl">
+                    <a href="#"><img src="img/img2.png" /></a>
+                    <img src="img/pic-s.png" />
+                    <div class="msg">
+                        <h2>N3</h2>
+                        <p class="info">1600万电动旋转摄像头</p>
+                        <a href="#" class="clearfix price">
+                            <span class="fl">￥3699</span>
+                            <span class="fl">立即购买</span>
+                            <i class="fl icon_go"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="fl line"></span>
+                <div class="pic fl">
+                    <a href="#"><img src="img/img3.png" /></a>
+                    <img src="img/pic-s.png" />
+                    <div class="msg">
+                        <h2>N3</h2>
+                        <p class="info">1600万电动旋转摄像头</p>
+                        <a href="#" class="clearfix price">
+                            <span class="fl">￥3699</span>
+                            <span class="fl">立即购买</span>
+                            <i class="fl icon_go"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="fl line"></span>
+                <div class="pic fl">
+                    <a href="#"><img src="img/img4.png" /></a>
+                    <img src="img/pic-s.png" />
+                    <div class="msg">
+                        <h2>N3</h2>
+                        <p class="info">1600万电动旋转摄像头</p>
+                        <a href="#" class="clearfix price">
+                            <span class="fl">￥3699</span>
+                            <span class="fl">立即购买</span>
+                            <i class="fl icon_go"></i>
+                        </a>
+                    </div>
+                </div>	
+            </div>
+        </div>
+    </div>
+    <!--accessory-->
+    <div class="accessory">
+    	<div class="accessory_in w">
+    		<a href="#" class="title"></a>
+            <div class="acc_product clearfix">
+                <div class="left fl marr_20">
+                    <div class="up clearfix marb_20">
+                        <a href="#" class="pro_1 marr_20 fl">
+                        	<img src="img/img1_1.png" />
+                            <div class="pic_msg">
+                            	<span class="info">可触摸视窗 世界触手可及</span>
+                            	<p>OPPO Find7视窗保护皮套</p>
+                                <span class="price">￥198.00</span>
+                            </div>
+                        </a>
+                        <div class="pro_2 fl">
+                            <div class="text_box marb_20">
+                            	<p class="acc_title">oppo手机官网accessory配件</p>
+                                <div class="acc_word clearfix">
+                                	<a href="#" class="fl clearfix lang">
+                                    	<i class="iocn1 fl"></i>
+                                        <span class="fl">耳机</span>
+                                    </a>
+                                	<a href="#" class="fl clearfix">
+                                    	<i class="iocn1 fl"></i>
+                                        <span class="fl">耳机</span>
+                                    </a>
+                                	<a href="#" class="fl clearfix lang">
+                                    	<i class="iocn1 fl"></i>
+                                        <span class="fl">耳机</span>
+                                    </a>
+                                	<a href="#" class="fl clearfix">
+                                    	<i class="iocn1 fl"></i>
+                                        <span class="fl">耳机</span>
+                                    </a>
+                                	<a href="#" class="fl clearfix lang">
+                                    	<i class="iocn1 fl"></i>
+                                        <span class="fl">耳机</span>
+                                    </a>
+                                	<a href="#" class="fl clearfix">
+                                    	<i class="iocn1 fl"></i>
+                                        <span class="fl">耳机</span>
+                                    </a>
+                                </div>
+                                <a href="#" class="all_acc clearfix">
+                                	<span class="fl">全部配件</span>
+                                    <b class="fl"></b>
+                                </a>
+                            </div>
+                            <a href="#" class="dianyuan">
+                            	<img src="img/img1_2.png" />
+                                <div class="pic_msg small">
+                                    <p>OPPO电源适配器</p>
+                                    <span class="price">￥198.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="down">
+                    	<img src="img/img1_4.png" class="fl" />
+                        <div class="pic_msg">
+                            <span class="info">可触摸视窗 世界触手可及</span>
+                            <p>OPPO 原装数据线</p>
+                            <span class="price">￥198.00</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="right fl">
+                	<a href="#" class="clearfix pro3 marb_20">
+                    	<img src="img/img1_3.png" class="fl" />
+                        <div class="pic_msg fl">
+                            <span class="info">可触摸视窗 世界触手可及</span>
+                            <p>OPPO 原装数据线</p>
+                        </div>
+                	</a>
+                    <div class="up clearfix marb_20">
+                        <a href="#" class="pro_1 marr_20 fl">
+                        	<img src="img/img1_5.png" />
+                            <div class="pic_msg">
+                            	<span class="info">可触摸视窗 世界触手可及</span>
+                            	<p>OPPO Find7视窗保护皮套</p>
+                                <span class="price">￥198.00</span>
+                            </div>
+                        </a>
+                        <div class="pro_2 fl">
+                            <a href="#" class="dianyuan marb_20">
+                            	<img src="img/img1_6.png" />
+                                <div class="pic_msg small">
+                                    <p>OPPO电源适配器</p>
+                                    <span class="price">￥198.00</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dianyuan">
+                            	<img src="img/img1_7.png" />
+                                <div class="pic_msg small">
+                                    <p>OPPO电源适配器</p>
+                                    <span class="price">￥198.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--world-->
+    <div class="world">
+    	<div class="world_in w">
+    		<a href="#" class="title"></a>
+            <div class="world_serve">
+            	<ul class="clearfix fl">
+                	<li class="marb_20 marr_20 fl">
+                    	<a href="#"><img src="img/img2_1.png" /></a>
+                    </li>
+                	<li class="marb_20 marr_20 fl">
+                    	<a href="#"><img src="img/img2_2.png" /></a>
+                    </li>
+                	<li class="marb_20 marr_20 fl">
+                    	<a href="#"><img src="img/img2_3.png" /></a>
+                    </li>
+                	<li class="marb_20 marr_20 fl">
+                    	<a href="#"><img src="img/img2_4.png" /></a>
+                    </li>
+                </ul>
+                <div class="text_list fl">
+                	<div class="w_title clearfix">
+                    	<input type="button" value="新闻" class="fl cur" />
+                    	<input type="button" value="微博" class="fl" />
+                    </div>
+                    <ul class="news">
+                    	<li>
+                        	<a href="#" class="clearfix">
+                            	<img src="img/w_img1.png" class="fl" />
+                                <p class="fl">是范德萨发的发的萨芬的的收费方式的东方时尚</p>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#" class="clearfix">
+                            	<img src="img/w_img1.png" class="fl" />
+                                <p class="fl">是范德萨发的发的萨芬的的收费方式的东方时尚</p>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#" class="clearfix">
+                            	<img src="img/w_img1.png" class="fl" />
+                                <p class="fl">是范德萨发的发的萨芬的的收费方式的东方时尚</p>
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="#" class="clearfix">
+                            	<img src="img/w_img1.png" class="fl" />
+                                <p class="fl">是范德萨发的发的萨芬的的收费方式的东方时尚</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--foot-->
+    <div class="foot">
+    	<ul class="foot_in w clearfix">
+        	<li class="fl clearfix">
+            	<i class="icon fl"></i>
+                <div class="fl">
+                	<p>正品保障</p>
+                   	<span>所有产品的是原装正品</span>
+                </div>
+            </li>
+        	<li class="fl clearfix">
+            	<i class="icon2 fl"></i>
+                <div class="fl">
+                	<p>79元起包邮</p>
+                   	<span>高效的物流配送</span>
+                </div>
+            </li>
+        	<li class="fl clearfix">
+            	<i class="icon3 fl"></i>
+                <div class="fl">
+                	<p>7天退换货</p>
+                   	<span>所有产品的是原装正品</span>
+                </div>
+            </li>
+        	<li class="fl clearfix">
+            	<i class="icon4 fl"></i>
+                <div class="fl">
+                	<p>285自提点</p>
+                   	<span>所有产品的是原装正品</span>
+                </div>
+            </li>
+        	<li class="fl clearfix">
+            	<i class="icon5 fl"></i>
+                <div class="fl">
+                	<p>356家客服网点</p>
+                   	<span>所有产品的是原装正品</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--end-->
+    <div class="end w clearfix">
+    	<div class="info fl">
+        	<h4>关于我们</h4>
+            <a href="#">关于OPPO</a>
+            <a href="#">新闻中心</a>
+            <a href="#">人才招聘</a>
+        </div>
+    	<div class="info fl">
+        	<h4>推荐机型</h4>
+            <a href="#">N3</a>
+            <a href="#">R5</a>
+            <a href="#">R1C</a>
+            <a href="#">find 7</a>
+        </div>
+    	<div class="info fl">
+        	<h4>购物相关</h4>
+            <a href="#">帮助中心</a>
+            <a href="#">周边产品</a>
+            <a href="#">OPPO体验店</a>
+            <a href="#">客户服务政策</a>
+        </div>
+    	<div class="info fl">
+        	<h4>会员中心</h4>
+            <a href="#">会员注册</a>
+            <a href="#">产品注册</a>
+            <a href="#">会员登录</a>
+        </div>
+    	<div class="care fl">
+        	<h4>关注我们</h4>
+            <a href="#" class="clearfix">
+            	<i class="fl icon1"></i>
+           		<span class="fl">新浪微博</span>
+            </a>
+            <a href="#" class="clearfix">
+            	<i class="fl icon2"></i>
+           		<span class="fl">腾讯微博</span>
+            </a>
+            <a href="#" class="clearfix">
+            	<i class="fl icon3"></i>
+           		<span class="fl">人人网</span>
+            </a>
+            <a href="#" class="clearfix">
+            	<i class="fl icon4"></i>
+           		<span class="fl">QQ空间</span>
+            </a>
+        </div>
+        <div class="cell fl">
+        	<h4>联系我们</h4>
+            <div class="clearfix sever">
+            	<i class="fl"></i>
+                <div class="fl">
+                	<p>4001-666-888</p>
+                    <span>7*24小时客户服务</span>
+                </div>
+            </div>
+            <div class="clearfix">
+            	<i class="fl icon2"></i>
+                <div class="fl">
+                	<a href="#" class="clearfix">
+                    	<p class="fl">在线客服</p>
+                        <b class="fl"></b>
+                    </a>
+                    <span>服务时段：8:30-22:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--copyright-->
+    <div class="copyright">
+    	<div class="w clearfix">
+        	<a href="#" class="fl last_logo"></a>
+            <p class="fl">@2005-2016东莞市科技有限公司copyright</p>
+            <div class="link fr clearfix">
+            	<a href="#" class="fl">版权说明</a>
+            	<a href="#" class="fl">使用协议</a>
+            	<a href="#" class="fl">友情链接</a>
+            	<a href="#" class="fl">网站地图</a>
+            	<a href="#" class="fl">联系我们</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
